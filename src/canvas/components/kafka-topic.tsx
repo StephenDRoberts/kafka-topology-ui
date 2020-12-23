@@ -12,16 +12,17 @@ interface KafkaTopicProps {
 }
 const KafkaTopic = (props: KafkaTopicProp) => { 
     const { cx, cy } = props.props
-    const radius = 30
+    const circlePositioningAdj = (50/2)
+    const radius =30
 
-    const offset1 = Math.sqrt(2) / 2
+    const offset = Math.sqrt(2) / 2
 
     return (
         <g>        
-            <circle cx={cx} cy={cy} r={radius} fill={"none"} stroke={"black"} stroke-linecap={"butt"}></circle>
-            <line x1={cx - radius * offset1} y1={cy - radius * offset1} x2={cx + radius * offset1} y2={cy + radius * offset1} stroke={"black"} ></line>
-            <line x1={cx - radius * offset1} y1={cy + radius * offset1} x2={cx + radius * offset1} y2={cy - radius * offset1} stroke={"black"} ></line>
-            <text x={cx} y={cy - 15 - radius} text-anchor="middle">Kafka Topic</text>            
+            <circle cx={cx} cy={cy + circlePositioningAdj} r={radius} fill={"none"} stroke={"black"} stroke-linecap={"butt"}></circle>
+            <line x1={cx - radius * offset} y1={cy +circlePositioningAdj- radius * offset} x2={cx + radius * offset} y2={cy +circlePositioningAdj+ radius * offset} stroke={"black"} ></line>
+            <line x1={cx - radius * offset} y1={cy + circlePositioningAdj+radius * offset} x2={cx + radius * offset} y2={cy +circlePositioningAdj- radius * offset} stroke={"black"} ></line>
+            <text x={cx} y={cy - 15} text-anchor="middle">Kafka Topic</text>            
         </g>
     )
 }

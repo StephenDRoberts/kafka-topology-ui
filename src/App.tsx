@@ -36,9 +36,13 @@ function App() {
   //   createD3Element(myRef)
   // },[])
 
+  const HEIGHT = 80
+  const WIDTH = 120
+  const RADIUS = 30
+
   const props1 = {
     x: 50,
-    y: 50,
+    y: 100,
     fill: "navy"
   }
 
@@ -51,7 +55,7 @@ function App() {
 
   const kafkaTopicProps = {
     cx: 500,
-    cy: 100
+    cy: HEIGHT + RADIUS
   }
 
   return (
