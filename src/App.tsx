@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import * as d3 from 'd3';
 import './App.css';
 import ClassApplication from './canvas/components/class-application';
+import KafkaTopic from './canvas/components/kafka-topic';
 
 const DATA = [1]
 
@@ -36,24 +37,31 @@ function App() {
   // },[])
 
   const props1 = {
+    x: 50,
     y: 50,
     fill: "navy"
   }
 
 
   const props2 = {
+    x: 250,
     y: 100,
     fill: "pink"
+  }
+
+  const kafkaTopicProps = {
+    cx: 500,
+    cy: 100
   }
 
   return (
     <div className="App">
       
       {/* <div ref={ myRef }></div> */}
-      <svg >
+      <svg height={"100vh"} width={"100vw"} >
         <ClassApplication props={props1} />
         <ClassApplication props={props2}/>
-        <rect y={100} fill={"pink"} width={25} height={ 60}></rect>
+        <KafkaTopic props={kafkaTopicProps}/>
       </svg>
     </div>
   );
