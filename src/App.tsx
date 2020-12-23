@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 import './App.css';
 import ClassApplication from './canvas/components/class-application';
 import KafkaTopic from './canvas/components/kafka-topic';
+import OneWayArrow from './canvas/Arrows/oneWayArrow';
 
 const DATA = [1]
 
@@ -46,6 +47,12 @@ function App() {
     fill: "navy"
   }
 
+  const arrow1Props = {
+    x1: 50 + WIDTH,
+    y1: 100 + (HEIGHT / 2),
+    x2: 250,
+    y2: 100 + (HEIGHT / 2)
+  }
 
   const props2 = {
     x: 250,
@@ -58,13 +65,16 @@ function App() {
     cy: HEIGHT + RADIUS
   }
 
+
+
   return (
     <div className="App">
       
       {/* <div ref={ myRef }></div> */}
       <svg height={"100vh"} width={"100vw"} >
         <ClassApplication props={props1} />
-        <ClassApplication props={props2}/>
+        <ClassApplication props={props2} />
+        <OneWayArrow props={arrow1Props} />
         <KafkaTopic props={kafkaTopicProps}/>
       </svg>
     </div>
