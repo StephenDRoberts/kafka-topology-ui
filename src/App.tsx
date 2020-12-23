@@ -60,9 +60,17 @@ function App() {
     fill: "pink"
   }
 
+  const arrow2Props = {
+    x1: 250 + WIDTH,
+    y1: 100 + (HEIGHT / 2),
+    x2: 500 - RADIUS,
+    y2: 100 + (HEIGHT / 2)
+  }
+
+  // const circlePositioningAdj = (50/2)
   const kafkaTopicProps = {
     cx: 500,
-    cy: HEIGHT + RADIUS
+    cy: 100 + HEIGHT / 2 
   }
 
 
@@ -75,6 +83,7 @@ function App() {
         <ClassApplication props={props1} />
         <ClassApplication props={props2} />
         <OneWayArrow props={arrow1Props} />
+        <OneWayArrow props={arrow2Props} />
         <KafkaTopic props={kafkaTopicProps}/>
       </svg>
     </div>
