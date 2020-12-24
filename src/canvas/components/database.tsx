@@ -1,23 +1,10 @@
-import { createExternalModuleReference, createYield } from "typescript"
-
-interface DatabaseProp { 
-    props: DatabaseProps
-}
-
-interface DatabaseProps { 
+interface StoreProps { 
     x: number,
-    y: number,
-    // width: number,
-    // height: number
+    y: number
 }
-const Database = (props: DatabaseProp) => { 
-    const { x, y } = props.props
+const Store = (props: StoreProps) => { 
+    const { x, y } = props
     
-
-    const radius =30
-
-    const offset = Math.sqrt(2) / 2
-
     return (
         <g>        
             <rect x={x} y={y} height={70} width={80} fill={"none"} stroke={"black"} stroke-linecap={"butt"}></rect>
@@ -28,7 +15,7 @@ const Database = (props: DatabaseProp) => {
     )
 }
 
-export default Database
+export default Store
 
 
 

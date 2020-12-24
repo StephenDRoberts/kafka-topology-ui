@@ -1,15 +1,11 @@
-interface OneWayArrowProp { 
-    props: OneWayArrowProps
-}
-
 interface OneWayArrowProps { 
     x1: number,
     y1: number,
     x2: number,
     y2: number,
 }
-const OneWayArrow = (props: OneWayArrowProp) => { 
-    const { x1, y1, x2, y2 } = props.props
+const OneWayArrow = (props: OneWayArrowProps) => { 
+    const { x1, y1, x2, y2 } = props
  
     const offset = 5 * Math.sqrt(2) / 2
 

@@ -1,17 +1,9 @@
-
-interface ClassApplicationProp { 
-    props: ClassApplicationProps
-}
-
 interface ClassApplicationProps { 
     x: number,
-    y: number,
-    fill: string,
-    // width: number,
-    // height: number
+    y: number
 }
-const ClassApplication = (props: ClassApplicationProp) => { 
-    const { x, y, fill } = props.props
+const ClassApplication = (props: ClassApplicationProps) => { 
+    const { x, y } = props
 
     return (
         <g>        

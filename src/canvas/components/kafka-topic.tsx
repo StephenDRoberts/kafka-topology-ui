@@ -1,18 +1,9 @@
-import { createExternalModuleReference, createYield } from "typescript"
-
-interface KafkaTopicProp { 
-    props: KafkaTopicProps
-}
-
 interface KafkaTopicProps { 
     cx: number,
-    cy: number,
-    // width: number,
-    // height: number
+    cy: number
 }
-const KafkaTopic = (props: KafkaTopicProp) => { 
-    const { cx, cy } = props.props
-    
+const KafkaTopic = (props: KafkaTopicProps) => { 
+    const { cx, cy } = props
 
     const radius =30
 
