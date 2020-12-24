@@ -5,6 +5,7 @@ import './App.css';
 import ClassApplication from './canvas/components/class-application';
 import KafkaTopic from './canvas/components/kafka-topic';
 import OneWayArrow from './canvas/Arrows/oneWayArrow';
+import Database from './canvas/components/database';
 
 const DATA = [1]
 
@@ -67,10 +68,14 @@ function App() {
     y2: 100 + (HEIGHT / 2)
   }
 
-  // const circlePositioningAdj = (50/2)
   const kafkaTopicProps = {
     cx: 500,
     cy: 100 + HEIGHT / 2 
+  }
+
+  const databaseProps = {
+    x: 750,
+    y: 100
   }
 
 
@@ -85,6 +90,7 @@ function App() {
         <OneWayArrow props={arrow1Props} />
         <OneWayArrow props={arrow2Props} />
         <KafkaTopic props={kafkaTopicProps}/>
+        <Database props={databaseProps}/>
       </svg>
     </div>
   );
