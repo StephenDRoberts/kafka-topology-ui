@@ -1,0 +1,19 @@
+Topologies:
+   Sub-topology: 0
+    Source: KSTREAM-SOURCE-0000000000 (topics: [user-topic])
+      --> KSTREAM-MAP-0000000001
+    Processor: KSTREAM-MAP-0000000001 (stores: [])
+      --> KSTREAM-FILTER-0000000004
+      <-- KSTREAM-SOURCE-0000000000
+    Processor: KSTREAM-FILTER-0000000004 (stores: [])
+      --> KSTREAM-SINK-0000000003
+      <-- KSTREAM-MAP-0000000001
+    Sink: KSTREAM-SINK-0000000003 (topic: KSTREAM-TOTABLE-0000000002-repartition)
+      <-- KSTREAM-FILTER-0000000004
+
+  Sub-topology: 1
+    Source: KSTREAM-SOURCE-0000000005 (topics: [KSTREAM-TOTABLE-0000000002-repartition])
+      --> KSTREAM-TOTABLE-0000000002
+    Processor: KSTREAM-TOTABLE-0000000002 (stores: [user-store])
+      --> none
+      <-- KSTREAM-SOURCE-0000000005

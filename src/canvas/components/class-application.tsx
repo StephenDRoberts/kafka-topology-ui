@@ -7,7 +7,7 @@ const ClassApplication = (props: ClassApplicationProps) => {
 
     return (
         <g>        
-            <rect x={x} y={y} fill={"white"} width={120} height={80} stroke={"black"} stroke-linecap={"butt"}></rect>
+            <rect x={x} y={y} fill={"white"} width={120} height={80} stroke={"black"} strokeLinecap={"butt"}></rect>
             <text x={x} y={y - 15} >Class Application</text>            
         </g>
     )

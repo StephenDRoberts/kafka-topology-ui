@@ -11,10 +11,10 @@ const KafkaTopic = (props: KafkaTopicProps) => {
 
     return (
         <g>        
-            <circle cx={cx} cy={cy} r={radius} fill={"none"} stroke={"black"} stroke-linecap={"butt"}></circle>
+            <circle cx={cx} cy={cy} r={radius} fill={"none"} stroke={"black"} strokeLinecap={"butt"}></circle>
             <line x1={cx - radius * offset} y1={cy - radius * offset} x2={cx + radius * offset} y2={cy + radius * offset} stroke={"black"} ></line>
             <line x1={cx - radius * offset} y1={cy +radius * offset} x2={cx + radius * offset} y2={cy - radius * offset} stroke={"black"} ></line>
-            <text x={cx} y={cy - radius - 15} text-anchor="middle">Kafka Topic</text>            
+            <text x={cx} y={cy - radius - 15} textAnchor="middle">Kafka Topic</text>            
         </g>
     )
 }
